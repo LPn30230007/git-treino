@@ -1,0 +1,75 @@
+Exercícios no Github – 6 Março 2025
+Aluna – Daniela Gabriel
+
+Parte 1: Fundamentos do Git (obrigatório)
+
+1.1 Configuração do Git e criação de repositório local
+
+• Configurar nome e e-mail do Git.
+git config --global user.name "LPn30230007"
+git config --global user.email "30230007@uac.pt"
+
+• Criar um novo repositório local git-treino e conectá-lo ao GitHub.
+mkdir git-treino
+cd git-treino
+git init
+
+1.2 Clonando e adicionando arquivos ao repositório
+
+• Criar um repositório no GitHub.
+<Aceder ao GitHub e criar um novo repositório chamado git-treino.>
+git remote add origin https://github.com/LPn30230007/git-treino.git
+
+• Cloná-lo para o computador.
+git clone https://github.com/LPn30230007/git-treino.git
+
+• Insira o ficheiro log.txt no clone.
+echo "Este é o ficheiro de log." > log.txt
+git add log.txt
+git commit -m "Adicionar ficheiro log.txt"
+
+1.3 Enviar mudanças para o GitHub
+
+• Efetuar uma mudança e enviá-la (push).
+git push origin main
+
+1.4 Trabalhando com branches
+
+• Criar um branch chamado nova-feature e fazer uma alteração.
+git checkout -b nova-feature
+echo "Linha adicionada na nova feature." >> log.txt
+git add log.txt
+git commit -m "Adicionar linha no branch nova-feature"
+push origin nova-feature
+
+Parte 2: Controle de Versão e Colaboração (opcional)
+
+2.1 Criando e mesclando um Pull Request
+
+• Criar um Pull Request no GitHub para mesclar nova-feature em main.
+<Aceder ao GitHub e criar um “New Pull Request”.>
+<Selecionar “nova-feature” e “main” fazer "Create Pull Request">
+
+• Aceitar e fazer o merge.
+<Fazer "Merge Pull Request".>
+
+2.2 Resolvendo conflitos de merge
+
+• Criar um novo branch e editar log.txt.
+git checkout -b outro-branch
+echo "Alteração no outro branch." >> log.txt
+git add log.txt
+git commit -m "Alteração no outro branch"
+git push origin outro-branch
+
+• Fazer o mesmo no main e tentar mesclar.
+git checkout main
+echo "Alteração no main." >> log.txt
+git add log.txt
+git commit -m "Alteração no main"
+git merge outro-branch
+
+2.3 Fazendo revisão de código no GitHub
+• Criar um Pull Request e solicitar um Code Review.
+• Comentar uma linha do código e sugerir mudanças.
+
