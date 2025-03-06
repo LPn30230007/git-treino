@@ -1,2 +1,3 @@
 Este é o ficheiro de log.
 Linha adicionada na nova feature.
+Alteração no outro branch.
